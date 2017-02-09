@@ -3,9 +3,11 @@ var express = require('express');
 var router = express.Router();
 var auth = require('./auth');
 var CustomerDao = require("./dao/customerDao.js");
+var UserDao = require("./dao/userDao.js");
 
 // create a new instance.
 var customer = new CustomerDao();
+var user = new UserDao();
 
 // If the req is needed to be pre-process, do it here.
 router.use(function timeLog (req, res, next) {
@@ -39,7 +41,9 @@ router.post('/createaccount',
      var sql = "SELECT id FROM surprise.customer WHERE email = ?;"
      var values = [email];
      customer.execute(sql,values,function(error, res){
-         console.log(res);
+         user.createUser(res, password, function(error, user) {
+           console.log("succeeded.");
+         });
      });
     });
 
