@@ -1,1 +1,58 @@
-body{background-color:#ccc }
+body{background-color:#fff }
+
+/*Header and Footer*/
+.header {
+  height: 80px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/*align elements*/
+.left {
+   position: absolute;
+   left: 25%;
+   widh: 300px;
+   top: 45%;
+   border: 3px transparent;
+   padding: 10px;
+}
+
+.right {
+   position: absolute;
+   right: 25%;
+   widh: 300px;
+   bottom: 30%;
+   border: 3px transparent;
+   padding: 10px;
+}
+
+/*Left and right Align - Using float*/
+.rightfloat {
+   float: right;
+   width: 300px;
+   border: 3px transparent;
+   padding: 10px;
+}
+
+.center {
+   text-align: center;
+   border: 3px transparent;
+}
+
+/* center image */
+img {
+   display: block;
+   margin: 0 auto;
+}
+
+/*icon*/
+.button {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 15px 16px;
+}
+
+
